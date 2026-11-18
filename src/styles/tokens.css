@@ -1,0 +1,113 @@
+/* Tokens de diseño v2: pastel retro (ver CONTRATOS.md). Dueño: seven */
+:root {
+  /* Marco y pantalla */
+  --crema: #fff6e9;
+  --bezel: #f3e6d3;
+  --bezel-sombra: #e2cfb6;
+  --pantalla: #eee8ff;
+  --grid: #dcd2ff;
+  --fondo: #d9ccef;
+  --tinta: #3d2c5c;
+  --tinta-suave: #6e5e8e; /* AA sobre blanco (5.7:1), crema y pantalla (4.8:1) */
+  --blanco: #ffffff;
+
+  /* Pasteles */
+  --lila: #c9b8ff;
+  --rosa: #ffc8dd;
+  --menta: #bdeddb;
+  --cielo: #bde0fe;
+  --durazno: #ffd6ba;
+  --limon: #fff1b8;
+
+  /* Pastel por personaje */
+  --p-707: #ffb8b8;
+  --p-jumin: #bfcbf5;
+  --p-zen: #e1e3ec;
+  --p-yoosung: #c9edb6;
+  --p-jaehee: #f3dcbd;
+  --p-v: #b8e9e9;
+  --p-unknown: #dcc6f2;
+  --p-fressia: #ffc8dd;
+
+  /* Tipografía */
+  --font-pixel: 'RFA Digits', 'Pixelify Sans', 'Silkscreen', ui-monospace, monospace; /* RFA Digits: solo 0-9 */
+  --font-mono-px: 'Silkscreen', 'Pixelify Sans', ui-monospace, monospace;
+  --font-body: 'Nunito', ui-rounded, 'Segoe UI', system-ui, sans-serif;
+  --fs-px-xs: 0.5625rem; /* 9px: etiquetas guía */
+  --fs-px-sm: 0.75rem;   /* 12px: HUD, tags */
+  --fs-px-md: 0.9375rem; /* 15px: texto del diálogo */
+  --fs-card: 1.25rem;    /* 20px: títulos de tarjeta */
+  --fs-title: clamp(2rem, 1.2rem + 3.6vw, 3.25rem); /* 32-52px: PixelTitle */
+
+  /* Forma */
+  --borde: 3px solid var(--tinta);
+  --borde-fino: 2px solid var(--tinta);
+  --sombra-dura: 5px 5px 0 var(--tinta);
+  --sombra-dura-hover: 8px 8px 0 var(--tinta);
+  --radio: 12px;
+  --radio-sm: 6px;
+  --monitor-max: 1180px;
+  --gutter: 16px;
+
+  /* Movimiento */
+  --ease-px: steps(4, end);
+  --dur-fast: 140ms;
+  --dur-med: 260ms;
+  --focus-ring: #3d2c5c;
+
+  color-scheme: light;
+}
+
+/* ---- Tokens v1 (legado: los usan Starfield/HexButton/CircleButton/StatusBar/ChatBubble hasta la migración) ---- */
+:root {
+  --bg: #050508;
+  --bg-elevated: #121214;
+  --chat-top: #14163c;
+  --chat-bottom: #6d7ea1;
+  --chat-gradient: linear-gradient(180deg, var(--chat-top) 0%, #2a3463 55%, var(--chat-bottom) 100%);
+  --bubble: #e5e5e5;
+  --bubble-text: #1a1a1a;
+  --text: #f4f4f6;
+  --text-muted: #a0a3b1;
+  --accent-cyan: #6fc1ac;
+  --answer: #feee94;
+  --heart: #ff125c;
+  --alert: #f73636;
+  --gold: #e8c872;
+  --call-panel: #123028;
+  --call-accept: #2ebd59;
+  --call-reject: #e53935;
+  --c-jumin: #2a4fa8;
+  --c-zen: #8a8a8a;
+  --c-707: #c0272d;
+  --c-yoosung: #1f9e3a;
+  --c-jaehee: #a27a4e;
+  --c-v: #1e9aa8;
+  --c-unknown: #7b3fa6;
+  --c-ray: #4646b8;
+  --control-fill: #5c5c62;
+  --control-fill-hover: #6c6c73;
+  --control-stroke: #e6e6ea;
+  --control-accent: #b3263a;
+  --control-accent-stroke: #ff6b7d;
+  --font-ui: var(--font-body);
+  --font-display: var(--font-pixel);
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.25rem;
+  --radius-bubble: 18px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --shell-max: 430px;
+  --hud-height: 52px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}

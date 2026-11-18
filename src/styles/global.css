@@ -1,0 +1,104 @@
+/* Estilos globales v2. Dueño: seven. Fuentes en index.html (Pixelify Sans, Silkscreen, Nunito). */
+@import './tokens.css';
+
+/*
+ * Dígitos legibles (v7): Pixelify Sans dibuja el 5 como S/8. Esta cara solo cubre 0-9 (unicode-range) y va
+ * primera en --font-pixel, así el resto del texto sigue en Pixelify. Fuente: Jersey 10 (Google Fonts, OFL),
+ * con size-adjust para igualar la altura de mayúsculas de Pixelify. Peso 100-900 = sin negrita sintética.
+ */
+@font-face {
+  font-family: 'RFA Digits';
+  src: url(https://fonts.gstatic.com/s/jersey10/v4/GftH7vZKsggXMf9n_J5n_5jh.woff2) format('woff2');
+  unicode-range: U+0030-0039;
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 130%;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  min-height: 100dvh;
+  background-color: var(--fondo);
+  /* cuadrícula muy suave fuera del monitor */
+  background-image:
+    linear-gradient(rgba(61, 44, 92, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(61, 44, 92, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: var(--tinta);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+#root { isolation: isolate; min-height: 100dvh; }
+img, picture, svg, video, canvas { display: block; max-width: 100%; }
+input, button, textarea, select { font: inherit; color: inherit; }
+button { background: none; border: 0; padding: 0; cursor: pointer; }
+a { color: inherit; text-underline-offset: 3px; }
+ul[role='list'], ol[role='list'] { list-style: none; padding: 0; }
+p, h1, h2, h3, h4 { overflow-wrap: break-word; }
+h1, h2, h3, h4 { font-family: var(--font-pixel); font-weight: 700; line-height: 1.15; }
+
+/* ---------- Foco y selección ---------- */
+:focus { outline: none; }
+:focus-visible {
+  outline: 3px dashed var(--focus-ring);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+::selection { background: var(--lila); color: var(--tinta); }
+
+/* ---------- Scrollbars ---------- */
+* { scrollbar-width: thin; scrollbar-color: var(--tinta-suave) transparent; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--lila); border: 2px solid var(--tinta); border-radius: 4px; }
+
+/* ---------- Utilidades ---------- */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+.px-font { font-family: var(--font-pixel); }
+.mono-px { font-family: var(--font-mono-px); letter-spacing: 0.04em; }
+.text-suave { color: var(--tinta-suave); }
+.pixelated { image-rendering: pixelated; image-rendering: crisp-edges; }
+/* Cuadrícula + scanlines reutilizables (MonitorFrame ya las aplica a la pantalla) */
+.grid-bg {
+  background-color: var(--pantalla);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.scanlines { position: relative; }
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(61, 44, 92, 0.045) 0 2px, transparent 2px 4px);
+}
+/* utilidades v1 (legado) */
+.text-muted { color: var(--tinta-suave); }
+.font-display { font-family: var(--font-pixel); }
+.chat-bg { background: var(--chat-gradient); }
+
+/* ---------- Movimiento reducido ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
