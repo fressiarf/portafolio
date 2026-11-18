@@ -1,0 +1,27 @@
+.layer {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.spark {
+  position: absolute;
+  opacity: 0;
+  animation: twinkle var(--d) steps(1, end) var(--delay) infinite;
+}
+
+/* Parpadeo por cuadros, tipo GIF: aparece, crece, gira, se apaga */
+@keyframes twinkle {
+  0% { opacity: 0; transform: scale(0.4); }
+  10% { opacity: 1; transform: scale(0.7); }
+  20% { opacity: 1; transform: scale(1); }
+  30% { opacity: 1; transform: scale(0.7) rotate(45deg); }
+  40% { opacity: 0.6; transform: scale(0.5) rotate(90deg); }
+  50%, 100% { opacity: 0; transform: scale(0.4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spark { animation: none; opacity: 0.55; }
+}

@@ -1,0 +1,116 @@
+.monitor {
+  width: min(var(--monitor-max), calc(100% - 2 * var(--gutter)));
+  margin: 28px auto;
+  padding: 22px;
+  border-radius: 34px;
+  background: var(--bezel);
+  box-shadow: inset 0 -8px 0 var(--bezel-sombra), 0 18px 40px rgba(61, 44, 92, 0.25);
+}
+
+.screen {
+  position: relative;
+  isolation: isolate; /* Sparkles/CatWalker usan z-index negativo dentro de la pantalla */
+  min-height: calc(100dvh - 56px - 44px - 34px);
+  overflow: hidden;
+  border: var(--borde);
+  border-radius: 20px;
+  /* cielo pastel claro (no noche): lila arriba, rosado abajo */
+  background: linear-gradient(180deg, #e6deff 0%, var(--pantalla) 38%, #f6ecff 70%, #ffeef6 100%);
+}
+
+/* Cuadrícula fina sobre el cielo */
+.screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(220, 210, 255, 0.75) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(220, 210, 255, 0.75) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.sky {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Estrella pixel: punto central + cruz (box-shadow) */
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--c);
+  box-shadow: 3px 0 0 var(--c), -3px 0 0 var(--c), 0 3px 0 var(--c), 0 -3px 0 var(--c);
+  filter: drop-shadow(0 0 1px rgba(61, 44, 92, 0.35));
+  opacity: 0.9;
+  animation: twinkle var(--d) steps(1, end) var(--delay) infinite;
+}
+
+.big {
+  width: 4px;
+  height: 4px;
+  box-shadow: 4px 0 0 var(--c), -4px 0 0 var(--c), 0 4px 0 var(--c), 0 -4px 0 var(--c),
+    8px 0 0 rgba(255, 255, 255, 0.6), -8px 0 0 rgba(255, 255, 255, 0.6),
+    0 8px 0 rgba(255, 255, 255, 0.6), 0 -8px 0 rgba(255, 255, 255, 0.6);
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  35% { opacity: 0.35; transform: scale(0.6); }
+  60% { opacity: 1; transform: scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star { animation: none; }
+}
+
+/* Scanlines por encima de todo, sin bloquear clics */
+.screen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(61, 44, 92, 0.045) 0 2px, transparent 2px 4px);
+}
+
+/* Pie del bisel: LED y placa */
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px 0;
+  font-family: var(--font-mono-px);
+  font-size: var(--fs-px-xs);
+  letter-spacing: 0.12em;
+  color: var(--tinta-suave);
+}
+
+.led {
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--tinta);
+  border-radius: 2px;
+  background: var(--menta);
+  animation: led 2.4s steps(1, end) infinite;
+}
+
+@keyframes led {
+  0%, 85%, 100% { background: var(--menta); }
+  88%, 95% { background: #8fd9bd; }
+}
+
+@media (max-width: 720px) {
+  .monitor {
+    margin: var(--gutter) auto;
+    padding: 10px;
+    border-radius: 22px;
+  }
+  .screen { border-radius: 14px; min-height: calc(100dvh - 2 * var(--gutter) - 20px - 30px); }
+  .foot { padding: 6px 8px 0; }
+}

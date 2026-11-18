@@ -1,0 +1,51 @@
+.wrap {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-pixel);
+  font-weight: 700;
+  font-size: var(--fs-title);
+  line-height: 1.05;
+  letter-spacing: 1px;
+  color: var(--tinta);
+  text-shadow: 4px 4px 0 var(--lila);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: min(70%, 720px);
+}
+
+.divider i {
+  flex: 1;
+  height: 3px;
+  background: var(--tinta);
+}
+
+.gem {
+  width: 14px;
+  height: 14px;
+  border: 3px solid var(--tinta);
+  background: var(--rosa);
+  transform: rotate(45deg);
+  animation: gem 3.2s steps(1, end) infinite;
+}
+
+@keyframes gem {
+  0%, 100% { background: var(--rosa); }
+  25% { background: var(--lila); }
+  50% { background: var(--menta); }
+  75% { background: var(--limon); }
+}
+
+@media (max-width: 600px) {
+  .title { text-shadow: 3px 3px 0 var(--lila); }
+  .divider { width: 86%; }
+}

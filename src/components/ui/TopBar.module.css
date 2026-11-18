@@ -1,0 +1,255 @@
+.bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  padding: 12px 26px;
+  background-color: var(--crema);
+  /* cuadros muy sutiles (homenaje al cuarto de 707) */
+  background-image: conic-gradient(rgba(201, 184, 255, 0.22) 25%, transparent 0 50%, rgba(201, 184, 255, 0.22) 0 75%, transparent 0);
+  background-size: 16px 16px;
+  border-bottom: var(--borde);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-pixel);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--tinta);
+  text-decoration: none;
+}
+
+.hud {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono-px);
+  font-size: var(--fs-px-sm);
+}
+
+/* Cápsula de corazones: crema, contorno tinta, sombra dura pequeña */
+.capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 5px 12px 5px 10px;
+  border: var(--borde-fino);
+  border-radius: 999px;
+  background: var(--crema);
+  box-shadow: 2px 2px 0 var(--tinta);
+  transition: background var(--dur-med) ease, box-shadow var(--dur-med) ease;
+}
+
+/* Dígitos legibles (Pixelify confundía 5 con 8) */
+.count {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--tinta);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Todos los corazones: brillo dorado suave */
+.complete {
+  background: linear-gradient(180deg, #fff6d6, #ffe9a8);
+  box-shadow: 2px 2px 0 var(--tinta), 0 0 0 3px rgba(232, 200, 114, 0.45), 0 0 14px rgba(232, 200, 114, 0.7);
+  animation: glow 2.4s ease-in-out infinite;
+}
+
+@keyframes glow {
+  50% { box-shadow: 2px 2px 0 var(--tinta), 0 0 0 4px rgba(232, 200, 114, 0.6), 0 0 22px rgba(232, 200, 114, 0.9); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .complete { animation: none; }
+}
+
+/* Aviso al ganar una sala */
+.toast {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  z-index: 61;
+  padding: 3px 8px;
+  border: var(--borde-fino);
+  border-radius: var(--radio-sm);
+  background: var(--menta);
+  color: var(--tinta);
+  font-size: 0.6875rem;
+  white-space: nowrap;
+  box-shadow: 2px 2px 0 var(--tinta);
+  pointer-events: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border: var(--borde-fino);
+  border-radius: var(--radio-sm);
+  background: var(--limon);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+
+.emailWrap { position: relative; display: inline-flex; }
+
+/* Posición fija calculada en JS (dentro del viewport, arriba o abajo del botón) */
+.popover {
+  position: fixed;
+  max-width: calc(100vw - 32px);
+  width: 260px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  z-index: 60;
+  display: grid;
+  gap: 2px;
+  padding: 8px;
+  border: var(--borde);
+  border-radius: var(--radio);
+  background: var(--blanco);
+  box-shadow: var(--sombra-dura);
+  transform-origin: top right;
+}
+
+.popover.up { transform-origin: bottom right; }
+
+.popEmail {
+  padding: 2px 6px 6px;
+  border-bottom: 2px dashed var(--grid);
+  margin-bottom: 4px;
+  font-family: var(--font-mono-px);
+  font-size: 0.6875rem;
+  color: var(--tinta-suave);
+  overflow-wrap: anywhere;
+}
+
+.popItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 7px 8px;
+  border: 2px solid transparent;
+  border-radius: var(--radio-sm);
+  color: var(--tinta);
+  font-family: var(--font-pixel);
+  font-size: 0.9375rem;
+  text-align: left;
+  text-decoration: none;
+}
+
+.popItem:hover,
+.popItem:focus-visible {
+  border-color: var(--tinta);
+  background: var(--limon);
+  outline: none;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 32px;
+  border: var(--borde-fino);
+  border-radius: var(--radio-sm);
+  background: var(--blanco);
+  color: var(--tinta);
+  transition: transform var(--dur-fast) steps(2, end), box-shadow var(--dur-fast) steps(2, end);
+}
+
+.icon:hover,
+.icon:focus-visible {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0 var(--tinta);
+}
+
+.lang {
+  display: inline-flex;
+  border: var(--borde-fino);
+  border-radius: var(--radio-sm);
+  overflow: hidden;
+  font-family: var(--font-mono-px);
+  font-size: var(--fs-px-sm);
+}
+
+.lang button {
+  padding: 5px 8px;
+  background: var(--blanco);
+  color: var(--tinta);
+}
+
+.lang button + button { border-left: var(--borde-fino); }
+.lang button[aria-pressed='true'] { background: var(--lila); }
+
+@media (max-width: 720px) {
+  .bar { padding: 10px 14px; }
+  .brand { font-size: 1.25rem; }
+}
+
+/* ---------- v7: móvil (botón + tarjeta) y estado completo ---------- */
+.heartMenu { display: none; position: relative; }
+
+.meterBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px 4px 8px;
+  border: var(--borde-fino);
+  border-radius: 999px;
+  background: var(--crema);
+  box-shadow: 2px 2px 0 var(--tinta);
+  color: var(--tinta);
+}
+
+.meterBtn[aria-expanded='true'] { background: var(--limon); }
+
+.heartCard { width: 280px; }
+.cardHearts { padding: 4px 6px 8px; }
+
+.missing {
+  padding: 6px;
+  border-top: 2px dashed var(--grid);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--tinta);
+}
+
+/* Insignia de miembro */
+.badge {
+  padding: 2px 8px;
+  border: var(--borde-fino);
+  border-radius: var(--radio-sm);
+  background: linear-gradient(180deg, #fff6d6, #ffe08a);
+  color: var(--tinta);
+  font-family: var(--font-mono-px);
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  box-shadow: 2px 2px 0 var(--tinta);
+}
+
+@media (max-width: 767.98px) {
+  .capsule { display: none; }
+  .heartMenu { display: inline-flex; }
+  .hud { flex-wrap: wrap; row-gap: 6px; }
+}

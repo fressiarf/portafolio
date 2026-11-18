@@ -1,0 +1,136 @@
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: var(--borde);
+  border-radius: var(--radio);
+  background: var(--blanco);
+  box-shadow: var(--sombra-dura);
+  color: var(--tinta);
+  text-decoration: none;
+  transition: transform var(--dur-fast) steps(3, end), box-shadow var(--dur-fast) steps(3, end);
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--sombra-dura-hover);
+}
+
+.card:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--tinta);
+}
+
+.card:focus-visible { outline-offset: 6px; border-radius: var(--radio); }
+
+.ico {
+  position: relative;
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 56px;
+}
+
+/* Marco hexagonal (homenaje a los botones del juego) */
+.hex {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.hex polygon {
+  fill: var(--card-color, var(--lila));
+  stroke: var(--tinta);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+
+.icoInner { position: relative; display: grid; place-items: center; }
+
+/* Objeto del guía: aparece a la derecha, centrado, donde antes iba la flecha (pedido de la clienta). */
+.prop {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-10%) rotate(-14deg) scale(0.6);
+  transition: opacity 0.18s steps(3, end), transform 0.28s cubic-bezier(0.3, 1.6, 0.5, 1);
+  pointer-events: none;
+  filter: drop-shadow(2px 2px 0 rgba(61, 44, 92, 0.35));
+}
+
+.card:hover .prop,
+.card:focus-visible .prop {
+  opacity: 1;
+  transform: translateY(-50%) rotate(8deg) scale(1);
+}
+
+/* deja sitio al objeto para que no pise el texto */
+.text { padding-right: 40px; }
+
+.text { min-width: 0; }
+
+.title {
+  font-family: var(--font-pixel);
+  font-size: var(--fs-card);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.subtitle {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--tinta-suave);
+}
+
+.host {
+  position: absolute;
+  right: 10px;
+  top: -14px;
+  padding: 2px 6px;
+  border: var(--borde-fino);
+  border-radius: var(--radio-sm);
+  background: var(--crema);
+  font-family: var(--font-mono-px);
+  font-size: 0.625rem; /* 10px */
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Destellos al pasar el cursor / enfocar */
+.spark {
+  position: absolute;
+  color: var(--spark, #e8a33d);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.s1 { left: -10px; top: -10px; --spark: #e05a8a; }
+.s2 { right: 34px; bottom: -11px; --spark: #8a6ee0; }
+.s3 { left: 46%; top: -12px; --spark: #3fae8c; }
+
+.card:hover .spark,
+.card:focus-visible .spark {
+  animation: spark 0.7s steps(4, end) both;
+}
+
+.card:hover .s2, .card:focus-visible .s2 { animation-delay: 0.08s; }
+.card:hover .s3, .card:focus-visible .s3 { animation-delay: 0.16s; }
+
+@keyframes spark {
+  0% { opacity: 0; transform: scale(0.2) rotate(0deg); }
+  40% { opacity: 1; transform: scale(1.1) rotate(45deg); }
+  100% { opacity: 0; transform: scale(0.6) rotate(90deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover, .card:focus-visible { transform: none; }
+  .card:hover .spark, .card:focus-visible .spark { animation: none; }
+}

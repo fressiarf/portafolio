@@ -1,0 +1,42 @@
+.stage {
+  position: relative;
+}
+
+.page {
+  position: relative;
+  transform-origin: center;
+}
+
+/* Destello blanco + franja de scanline que barre al entrar */
+.flash {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  background: var(--blanco);
+}
+
+.sweep {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 22%;
+  z-index: 41;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(201, 184, 255, 0.55) 40%,
+    rgba(255, 200, 221, 0.55) 60%,
+    transparent
+  );
+  mix-blend-mode: multiply;
+}
+
+.noise {
+  position: absolute;
+  inset: 0;
+  z-index: 39;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(61, 44, 92, 0.16) 0 1px, transparent 1px 3px);
+}

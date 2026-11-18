@@ -1,0 +1,197 @@
+.wrap {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 26px;
+  align-items: center;
+}
+
+.portrait {
+  position: relative;
+  display: grid;
+  justify-items: center;
+}
+
+.box {
+  position: relative;
+  padding: 18px 22px 16px;
+  border: 3px dashed var(--tinta);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.82);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Colita hacia el avatar */
+.box::before {
+  content: '';
+  position: absolute;
+  left: -17px;
+  top: 40px;
+  border: 10px solid transparent;
+  border-right-color: var(--tinta);
+}
+
+
+
+.who {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--font-pixel);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.count {
+  font-family: var(--font-mono-px);
+  font-size: var(--fs-px-sm);
+  font-weight: 400;
+}
+
+.text {
+  min-height: calc(1.7em * 3);
+  margin-top: 6px;
+  font-family: var(--font-mono-px);
+  font-size: var(--fs-px-md);
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  white-space: pre-wrap;
+}
+
+.caret {
+  display: inline-block;
+  width: 0.55em;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -0.1em;
+  background: var(--tinta);
+  animation: caret 0.8s steps(1, end) infinite;
+}
+
+@keyframes caret { 50% { opacity: 0; } }
+
+.next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  font-family: var(--font-mono-px);
+  font-size: 0.6875rem;
+  color: var(--tinta-suave);
+}
+
+.nextBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--tinta);
+  font-family: var(--font-mono-px);
+  font-size: 0.6875rem;
+}
+
+.nextBtn:hover { background: var(--limon); }
+
+.arrow { animation: nudge 0.9s steps(2, end) infinite; }
+
+@keyframes nudge {
+  50% { transform: translateX(3px); }
+}
+
+.cast {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.castBtn {
+  display: block;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform var(--dur-fast) steps(2, end), opacity var(--dur-fast);
+}
+
+/* Sin desplazamiento (v4): hover y activo se marcan con borde y fondo */
+.castBtn { padding: 2px; border: 2px solid transparent; }
+
+/* Amarillo más claro que --gold (pedido de la clienta), aún visible sobre blanco */
+.cast { --amarillo-suave: #f7e5a1; }
+
+/* Hover: solo un anillo amarillo tenue, sin caja (pedido de la clienta) */
+.castBtn:hover { background: none; border-color: transparent; box-shadow: 0 0 0 2px color-mix(in srgb, var(--amarillo-suave) 60%, transparent); }
+
+/* Activo: anillo amarillo + rombo debajo (mismo diseño, color amarillo del sitio: pedido de la clienta) */
+.castBtn.active {
+  position: relative;
+  background: none;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px var(--amarillo-suave);
+}
+
+.castBtn.active::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  width: 6px;
+  height: 6px;
+  background: var(--amarillo-suave);
+  border: 1px solid var(--tinta);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* Personaje sin línea en este diálogo: visible pero apagado */
+.castBtn.unavailable {
+  cursor: not-allowed;
+  opacity: 0.4;
+  filter: grayscale(0.8);
+}
+
+.castBtn.unavailable:hover { background: none; border-color: transparent; box-shadow: none; }
+
+.tools {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Guiño al botón de velocidad del juego */
+.speed {
+  padding: 2px 7px 1px;
+  border: var(--borde-fino);
+  border-radius: 5px;
+  background: var(--crema);
+  color: var(--tinta);
+  font-family: var(--font-pixel);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  box-shadow: 2px 2px 0 var(--tinta);
+}
+
+.speed[aria-pressed='true'] {
+  background: var(--limon);
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--tinta);
+}
+
+@media (max-width: 720px) {
+  .wrap { grid-template-columns: 1fr; gap: 18px; }
+  .portrait { justify-items: start; }
+  .box::before {
+    left: 34px;
+    top: -17px;
+    border-right-color: transparent;
+    border-bottom-color: var(--tinta);
+  }
+  .text { font-size: 0.8125rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .caret, .arrow { animation: none; }
+}

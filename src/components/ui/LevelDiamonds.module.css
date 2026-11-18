@@ -1,0 +1,33 @@
+.list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-mono-px);
+  font-size: 0.8125rem;
+  letter-spacing: 0.03em;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.gems {
+  display: inline-flex;
+  gap: 8px;
+  padding-inline: 2px;
+}
+
+.gem {
+  width: 13px;
+  height: 13px;
+  border: 2px solid var(--tinta);
+  background: var(--blanco);
+  transform: rotate(45deg);
+}
+
+.on { background: var(--rosa); }

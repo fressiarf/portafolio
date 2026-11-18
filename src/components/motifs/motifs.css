@@ -1,0 +1,258 @@
+/* Estilos propios de src/components/motifs (sesion V). */
+
+.motif-hearts {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  line-height: 0;
+}
+.motif-hearts__item {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+.motif-hearts__beat { display: inline-block; line-height: 0; }
+.motif-hearts__spark {
+  position: absolute;
+  inset: -40%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0 20%, rgba(255, 241, 184, 0.9) 35%, rgba(255, 241, 184, 0) 65%);
+  pointer-events: none;
+}
+
+/* ---------- Nave ---------- */
+.motif-ship-lane {
+  position: relative;
+  width: 100%;
+  height: 84px;
+  pointer-events: none;
+  overflow: visible;
+  --ship-w: 96px;
+}
+@media (max-width: 640px) {
+  .motif-ship-lane { --ship-w: 64px; height: 60px; }
+}
+.motif-ship-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--ship-w);
+}
+.motif-ship {
+  pointer-events: auto;
+  position: relative;
+  display: block;
+  width: var(--ship-w);
+  aspect-ratio: 32 / 18;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  border-radius: 40%;
+}
+.motif-ship:focus-visible {
+  outline: 3px dashed var(--tinta, #3D2C5C);
+  outline-offset: 4px;
+}
+.motif-ship svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.motif-ship__cockpit {
+  position: absolute;
+  left: 31.25%;
+  top: 4%;
+  width: 37.5%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.motif-ship__pilot {
+  position: absolute;
+  left: -15%;
+  top: -24%;
+  width: 130%;
+  height: auto;
+  max-width: none;
+}
+.motif-ship__light { animation: motif-blink 1.1s steps(1, end) infinite; }
+.motif-ship__light--b { animation-delay: 0.55s; }
+@keyframes motif-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+.motif-ship__flash {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 140%;
+  aspect-ratio: 1;
+  margin: -70% 0 0 -70%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0 30%, rgba(255, 241, 184, 0.8) 45%, rgba(255, 200, 221, 0) 70%);
+  pointer-events: none;
+}
+.motif-ship__drop {
+  position: absolute;
+  top: 70%;
+  pointer-events: none;
+  line-height: 0;
+}
+
+/* ---------- Reloj de progreso ---------- */
+.motif-hourglass {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 0;
+}
+.motif-hourglass__body {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.motif-hourglass--complete .motif-hourglass__body {
+  filter: drop-shadow(0 0 4px rgba(245, 201, 78, 0.85));
+  animation: motif-gold 2.4s ease-in-out infinite;
+}
+@keyframes motif-gold {
+  0%, 100% { filter: drop-shadow(0 0 3px rgba(245, 201, 78, 0.7)); }
+  50% { filter: drop-shadow(0 0 7px rgba(255, 216, 107, 1)); }
+}
+.motif-hourglass__flash {
+  position: absolute;
+  inset: -20%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 241, 184, 0.95) 0 25%, rgba(255, 241, 184, 0) 70%);
+  pointer-events: none;
+}
+
+/* ---------- Medidor de corazon ---------- */
+.motif-meter {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 0;
+}
+.motif-meter__beat { display: inline-block; line-height: 0; }
+.motif-meter--complete .motif-meter__beat {
+  filter: drop-shadow(0 0 3px rgba(245, 201, 78, 0.8));
+  animation: motif-gold 2.4s ease-in-out infinite;
+}
+
+/* ---------- Fiesta de la RFA ---------- */
+.motif-party {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(238, 232, 255, 0.82);
+  overflow: hidden;
+}
+.motif-party__rain { position: absolute; inset: 0; pointer-events: none; }
+.motif-party__drop,
+.motif-party__spark { position: absolute; top: 0; line-height: 0; }
+.motif-party__card {
+  position: relative;
+  width: min(560px, 100%);
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  background: var(--bezel, #F3E6D3);
+  border: var(--borde, 3px solid #3D2C5C);
+  border-radius: 18px;
+  box-shadow: var(--sombra-dura, 5px 5px 0 #3D2C5C);
+  padding: 14px;
+  color: var(--tinta, #3D2C5C);
+}
+.motif-party__screen {
+  background: var(--crema, #FFF6E9);
+  border: var(--borde, 3px solid #3D2C5C);
+  border-radius: 12px;
+  padding: 20px 16px 16px;
+  text-align: center;
+}
+.motif-party__title {
+  margin: 0 0 8px;
+  font-family: var(--font-pixel, monospace);
+  font-size: clamp(22px, 5vw, 32px);
+  line-height: 1.1;
+  text-shadow: 3px 3px 0 var(--lila, #C9B8FF);
+}
+.motif-party__message {
+  margin: 0 auto 16px;
+  max-width: 42ch;
+  font-family: var(--font-body, sans-serif);
+  font-size: 15px;
+  line-height: 1.45;
+}
+.motif-party__cast {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.motif-party__chibi {
+  width: 60px;
+  height: 60px;
+  flex: 0 0 auto;
+  border: 2px solid var(--tinta, #3D2C5C);
+  border-radius: 50%;
+  background: var(--c, var(--rosa, #FFC8DD));
+  overflow: hidden;
+}
+.motif-party__chibi img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.motif-party__actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.motif-party__btn {
+  font-family: var(--font-mono-px, monospace);
+  font-size: 14px;
+  padding: 8px 18px;
+  border: var(--borde, 3px solid #3D2C5C);
+  border-radius: 999px;
+  background: var(--blanco, #fff);
+  color: var(--tinta, #3D2C5C);
+  box-shadow: 3px 3px 0 var(--tinta, #3D2C5C);
+  cursor: pointer;
+  text-decoration: none;
+}
+.motif-party__btn--cta { background: var(--limon, #FFF1B8); }
+.motif-party__btn:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--tinta, #3D2C5C); }
+.motif-party__btn:focus-visible { outline: 3px dashed var(--tinta, #3D2C5C); outline-offset: 3px; }
+@media (max-width: 560px) {
+  .motif-party__cast {
+    display: grid;
+    grid-template-columns: repeat(4, 52px);
+    gap: 8px;
+  }
+  .motif-party__chibi { width: 52px; height: 52px; }
+}
+
+/* ---------- Coleccionable ---------- */
+.motif-collectible {
+  position: fixed;
+  z-index: 60;
+  padding: 4px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+  filter: drop-shadow(3px 3px 0 rgba(61, 44, 92, 0.35));
+}
+.motif-collectible:focus-visible {
+  outline: 3px dashed var(--tinta, #3D2C5C);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+.motif-collectible__glow {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 241, 184, 0.9), rgba(255, 241, 184, 0) 70%);
+  z-index: -1;
+}

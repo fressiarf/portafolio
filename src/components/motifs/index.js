@@ -1,0 +1,10 @@
+// Motivos pixel-art de la sesion V. Importar desde '@/components/motifs'.
+export { PropIcon } from './PropIcon.jsx'
+export { PROP_NAMES } from './propNames.js'
+export { HeartRow } from './HeartRow.jsx'
+export { SpaceShip } from './SpaceShip.jsx'
+export { Collectible } from './Collectible.jsx'
+export { ProgressHourglass } from './ProgressHourglass.jsx'
+export { HeartMeter } from './HeartMeter.jsx'
+export { RfaParty } from './RfaParty.jsx'
+export { HEART_ORDER, HEART_COLORS, HEART_NAMES } from './hearts.js'

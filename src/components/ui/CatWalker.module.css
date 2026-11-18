@@ -1,0 +1,61 @@
+.walker {
+  position: absolute;
+  bottom: 6px;
+  left: -80px;
+  z-index: 5;
+  animation: walk var(--walk, 18s) linear forwards;
+}
+
+/* Se detiene si la atrapas con el cursor o el foco */
+.walker:hover,
+.walker:focus-within { animation-play-state: paused; }
+
+.walker:hover .f1, .walker:hover .f2,
+.walker:focus-within .f1, .walker:focus-within .f2 { animation-play-state: paused; }
+
+@keyframes walk {
+  from { left: -80px; }
+  to { left: calc(100% + 16px); }
+}
+
+.sitting {
+  left: auto;
+  right: 84px;
+  animation: none;
+}
+
+.cat {
+  display: block;
+  width: 64px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.cat svg {
+  width: 100%;
+  height: 100%;
+  transform: scaleX(-1); /* el dibujo mira a la izquierda; camina hacia la derecha */
+  overflow: visible;
+}
+
+.f1 { animation: frameA 0.42s steps(1, end) infinite; }
+.f2 { animation: frameB 0.42s steps(1, end) infinite; }
+
+@keyframes frameA { 0% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes frameB { 0% { opacity: 0; } 50% { opacity: 1; } }
+
+.sitting .f1 { animation: none; opacity: 1; }
+.sitting .f2 { animation: none; opacity: 0; }
+
+.heart {
+  position: absolute;
+  left: 24px;
+  bottom: 40px;
+  color: #e0457b;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .f1, .f2 { animation: none; }
+  .f2 { opacity: 0; }
+}
