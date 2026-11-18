@@ -1,0 +1,64 @@
+.terminal {
+  min-width: 0;
+  padding: 20px;
+  background: var(--tinta, #3d2c5c);
+  color: var(--crema, #fff6e9);
+  border: var(--borde, 3px solid #3d2c5c);
+  border-radius: var(--radio, 12px);
+  box-shadow: 5px 5px 0 var(--lila, #c9b8ff);
+  font-family: var(--font-mono-px, monospace);
+  font-size: 0.85rem;
+}
+
+.block {
+  margin-bottom: 18px;
+}
+
+.command {
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+}
+
+.prompt {
+  color: var(--menta, #bdeddb);
+}
+
+.output {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding-left: 12px;
+  border-left: 2px dashed color-mix(in srgb, var(--crema, #fff6e9) 35%, transparent);
+}
+
+.result {
+  min-width: 0;
+}
+
+.category {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 1em;
+  margin-left: 6px;
+  vertical-align: -2px;
+  background: var(--crema, #fff6e9);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+  }
+}

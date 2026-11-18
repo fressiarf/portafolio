@@ -1,0 +1,51 @@
+.nav,
+.featured {
+  display: grid;
+  gap: 20px;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+  min-width: 0;
+}
+
+.nav > li,
+.featured > li {
+  min-width: 0;
+}
+
+@media (min-width: 640px) {
+  .nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .featured {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Easter egg discreto: casi invisible hasta el hover/foco */
+.secret {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 6px;
+  margin: 16px 0 0 auto;
+  padding: 4px 8px;
+  font-family: var(--font-mono-px, monospace);
+  font-size: 0.75rem;
+  color: var(--tinta-suave, #6e5e8e);
+  text-decoration: none;
+  opacity: 0.35;
+  transition: opacity 0.3s;
+}
+
+.secret:hover,
+.secret:focus-visible {
+  opacity: 1;
+}

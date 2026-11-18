@@ -1,0 +1,42 @@
+.filter {
+  min-width: 0;
+  margin: 0 0 20px;
+  padding: 0;
+  border: 0;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.option {
+  padding: 5px 10px;
+  font-family: var(--font-mono-px, monospace);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--tinta, #3d2c5c);
+  background: var(--blanco, #fff);
+  border: 2px solid var(--tinta, #3d2c5c);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.15s;
+}
+
+.option:hover,
+.option:focus-visible {
+  transform: translateY(-2px);
+}
+
+.option[aria-pressed='true'] {
+  background: var(--lila, #c9b8ff);
+  box-shadow: 2px 2px 0 var(--tinta, #3d2c5c);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .option {
+    transition: none;
+  }
+}

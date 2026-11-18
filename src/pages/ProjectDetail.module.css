@@ -1,0 +1,52 @@
+.card {
+  display: grid;
+  gap: 16px;
+}
+
+.media {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 7;
+  border: var(--borde, 3px solid #3d2c5c);
+  border-radius: var(--radio, 12px);
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--pantalla, #eee8ff) 0 12px,
+    color-mix(in srgb, var(--chip, #c9b8ff) 55%, var(--blanco, #fff)) 12px 24px
+  );
+  overflow: hidden;
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.summary {
+  margin: 0;
+  font-family: var(--font-pixel, inherit);
+  font-size: 1.15rem;
+}
+
+.description {
+  margin: 0;
+  font-family: var(--font-body, inherit);
+  line-height: 1.65;
+}
+
+.meta {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+
+.meta dd {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}

@@ -1,0 +1,87 @@
+{
+  "caso": {
+    "titulo": "Caso de estudio: Fressia's Messenger",
+    "intro": "Este portafolio es también un ejercicio de diseño. Así fue el proceso, de la referencia a la versión actual.",
+    "pasos": [
+      {
+        "id": "referencia",
+        "titulo": "Referencia",
+        "imagen": "/design/referencia-juego.webp",
+        "alt": "Pantalla de mensajería de Mystic Messenger usada como referencia visual",
+        "texto": "Partí de la estética de la app de mensajería de un otome game, Mystic Messenger. Tomé su idea de guías y salas, no sus pantallas.",
+        "credito": "Mystic Messenger © Cheritz Co., Ltd."
+      },
+      {
+        "id": "maqueta",
+        "titulo": "Maqueta v2",
+        "imagen": "/design/maqueta-v2.webp",
+        "alt": "Maqueta pastel del portafolio dentro de un marco de monitor retro",
+        "texto": "Diseñé una maqueta pastel inspirada en un sitio retro tipo monitor: título pixel, diálogo con avatar y tarjetas con contorno grueso."
+      },
+      {
+        "id": "primera-version",
+        "titulo": "Primera versión",
+        "imagen": "/design/version-v2.webp",
+        "alt": "Primera versión construida del portafolio",
+        "texto": "Construí la primera versión para validar la estructura: navegación por salas, diálogo y rejilla de secciones."
+      },
+      {
+        "id": "version-actual",
+        "titulo": "Versión actual",
+        "imagen": "/design/version-actual.webp",
+        "alt": "Versión actual del portafolio con guías, corazones y motivos pixel",
+        "texto": "Sumé guías por sección, corazones de progreso y motivos pixel propios para que explorar el sitio se sienta como un juego."
+      }
+    ],
+    "decisionesTitulo": "Decisiones",
+    "decisiones": [
+      {
+        "id": "paleta",
+        "titulo": "Paleta pastel",
+        "texto": "Colores claros con contorno morado oscuro: suaves a la vista y con contraste suficiente para leer bien."
+      },
+      {
+        "id": "tipografia",
+        "titulo": "Tipografía",
+        "texto": "Fuentes pixel para títulos y etiquetas, y Nunito para los textos largos, que se leen mejor."
+      },
+      {
+        "id": "avatares",
+        "titulo": "Avatares chibi",
+        "texto": "Cada sección tiene un guía con su avatar chibi, para que la navegación tenga personalidad.",
+        "imagen": "/design/avatares-chibi.webp",
+        "alt": "Avatares chibi de los guías del portafolio"
+      },
+      {
+        "id": "accesibilidad",
+        "titulo": "Accesibilidad",
+        "texto": "Todo se puede usar con teclado, cuido el contraste y respeto la preferencia de movimiento reducido."
+      },
+      {
+        "id": "responsive",
+        "titulo": "Responsive",
+        "texto": "Pensé el diseño para escritorio y lo adapté a móvil sin perder contenido ni generar scroll horizontal."
+      }
+    ]
+  },
+  "proyectos": {
+    "titulo": "Interfaces de mis proyectos",
+    "intro": "Capturas de las interfaces que diseñé y construí.",
+    "placeholder": "Capturas en camino",
+    "items": [
+      { "slug": "sembremos-seguridad", "nota": "Dashboards por rol y matriz de seguimiento.", "images": [] },
+      { "slug": "marketplace-fwd", "nota": "Plataforma de empleabilidad del Hackathon FWD 2026.", "images": [] },
+      { "slug": "dashboard-financiero", "nota": "Panel financiero con consultas en lenguaje natural.", "images": [] }
+    ]
+  },
+  "formacion": {
+    "titulo": "Formación y herramientas",
+    "items": [
+      { "id": "ctp", "titulo": "Técnico medio en Diseño Publicitario", "lugar": "CTP de Puntarenas", "fecha": "2025" },
+      { "id": "pasantia", "titulo": "Diseñadora Junior (pasantía)", "lugar": "Soluciones Gráficas", "fecha": "2025" },
+      { "id": "taller", "titulo": "Taller de Dibujo y Técnicas Mixtas", "lugar": "Universidad de Costa Rica", "fecha": "2025" }
+    ],
+    "herramientasTitulo": "Herramientas",
+    "herramientas": ["Illustrator", "Photoshop", "InDesign", "UI Design", "Branding"]
+  }
+}

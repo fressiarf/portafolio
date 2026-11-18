@@ -1,0 +1,99 @@
+[
+  {
+    "id": "707",
+    "nombre": "707",
+    "categoria": "Frontend",
+    "colorVar": "--p-707",
+    "tecnologias": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Vite",
+      "Bootstrap",
+      "Tailwind",
+      "Next.js"
+    ],
+    "prop": "chips"
+  },
+  {
+    "id": "jumin",
+    "nombre": "Jumin",
+    "categoria": "Backend",
+    "colorVar": "--p-jumin",
+    "tecnologias": [
+      "Node.js",
+      "Express",
+      "Sequelize",
+      "bcrypt",
+      "APIs REST"
+    ],
+    "prop": "wine"
+  },
+  {
+    "id": "yoosung",
+    "nombre": "Yoosung",
+    "categoria": "Bases de datos",
+    "colorVar": "--p-yoosung",
+    "tecnologias": [
+      "MySQL",
+      "Supabase",
+      "PostgreSQL"
+    ],
+    "prop": "gamepad"
+  },
+  {
+    "id": "zen",
+    "nombre": "Zen",
+    "categoria": "Herramientas",
+    "colorVar": "--p-zen",
+    "tecnologias": [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Postman",
+      "Terminal"
+    ],
+    "prop": "mirror"
+  },
+  {
+    "id": "jaehee",
+    "nombre": "Jaehee",
+    "categoria": "Diseño",
+    "colorVar": "--p-jaehee",
+    "tecnologias": [
+      "Illustrator",
+      "Photoshop",
+      "UI Design",
+      "Branding",
+      "Logo Design",
+      "InDesign"
+    ],
+    "prop": "coffee"
+  },
+  {
+    "id": "v",
+    "nombre": "V",
+    "categoria": "Despliegue",
+    "colorVar": "--p-v",
+    "tecnologias": [
+      "Vercel"
+    ],
+    "prop": "camera"
+  },
+  {
+    "id": "unknown",
+    "nombre": "Unknown",
+    "categoria": "IA",
+    "colorVar": "--p-unknown",
+    "tecnologias": [
+      "GitHub Copilot",
+      "Claude",
+      "Gemini",
+      "Cursor",
+      "Antigravity IDE"
+    ],
+    "prop": "minteye"
+  }
+]

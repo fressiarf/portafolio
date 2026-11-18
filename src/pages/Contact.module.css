@@ -1,0 +1,116 @@
+.invitation {
+  position: relative;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 24px;
+  color: var(--tinta, #3d2c5c);
+  background:
+    radial-gradient(circle at 12px 12px, var(--rosa, #ffc8dd) 3px, transparent 4px) 0 0 / 24px 24px,
+    var(--crema, #fff6e9);
+  border: var(--borde, 3px solid #3d2c5c);
+  border-radius: var(--radio, 12px);
+  box-shadow: var(--sombra-dura, 5px 5px 0 #3d2c5c);
+  outline: 3px dashed var(--p-yoosung, #c9edb6);
+  outline-offset: -14px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-pixel, inherit);
+  font-size: clamp(1.25rem, 5vw, 1.7rem);
+  text-align: center;
+}
+
+.host {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 14px;
+  background: var(--blanco, #fff);
+  border: 2px solid var(--tinta, #3d2c5c);
+  border-radius: 10px;
+}
+
+
+.name {
+  margin: 0;
+  font-family: var(--font-pixel, inherit);
+  font-size: 1.2rem;
+}
+
+.role {
+  margin: 2px 0 0;
+  color: var(--tinta-suave, #6e5e8e);
+}
+
+.text {
+  margin: 0 0 16px;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.channels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.copyRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.address {
+  padding: 8px 12px;
+  font-family: var(--font-mono-px, monospace);
+  font-size: 0.8rem;
+  background: var(--blanco, #fff);
+  border: 2px dashed var(--tinta, #3d2c5c);
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+
+.copy {
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  --chip: var(--p-yoosung, #c9edb6);
+}
+
+.copyError {
+  flex-basis: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--tinta, #3d2c5c);
+}
+
+.signature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  font-family: var(--font-mono-px, monospace);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}

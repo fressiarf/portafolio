@@ -1,0 +1,118 @@
+{
+  "sitio": "Fressia's Messenger",
+  "asociacion": "Rivera's Fullstack Association",
+  "credito": "Personajes de Mystic Messenger © Cheritz Co., Ltd. Homenaje de fan sin fines de lucro.",
+  "menu": {
+    "inicio": "Inicio",
+    "protocolo": "rfa://"
+  },
+  "niveles": [
+    {
+      "nivel": 1,
+      "label": "L1 Explorar"
+    },
+    {
+      "nivel": 2,
+      "label": "L2 Conocer"
+    },
+    {
+      "nivel": 3,
+      "label": "L3 Secreto"
+    }
+  ],
+  "home": {
+    "archivo": "lobby.md",
+    "visitadas": "{hearts} de {total} salas visitadas",
+    "destacados": "Proyectos destacados",
+    "secretoPista": "...",
+    "secretoLabel": "Algo se movió en la sala"
+  },
+  "sobreMi": {
+    "datos": "Datos",
+    "nombre": "Nombre",
+    "rol": "Rol",
+    "ubicacion": "Ubicación",
+    "estado": "Estado",
+    "disponible": "Disponible para nuevas oportunidades",
+    "noDisponible": "Sin disponibilidad por ahora",
+    "titulo": "Formación",
+    "idiomas": "Idiomas"
+  },
+  "proyectos": {
+    "filtro": "Filtrar por tecnología",
+    "todas": "Todas",
+    "destacado": "Destacado",
+    "vacio": "No hay proyectos con esa tecnología.",
+    "contador": "{n} proyectos"
+  },
+  "proyecto": {
+    "rol": "Rol",
+    "stack": "Stack",
+    "repo": "Repositorio",
+    "demo": "Demo",
+    "volver": "Volver al álbum"
+  },
+  "stack": {
+    "prompt": "707@rfa:~$",
+    "comando": "rfa stack --guia {id}",
+    "salida": "[{categoria}] {n} módulos cargados",
+    "fin": "proceso terminado. 0 errores, 0 advertencias."
+  },
+  "diseno": {
+    "ampliar": "Ver imagen ampliada",
+    "paso": "Paso",
+    "verProyecto": "Ver proyecto"
+  },
+  "trayectoria": {
+    "verProyecto": "Ver proyecto",
+    "cvTitulo": "Currículum",
+    "verCv": "Ver CV",
+    "descargarCv": "Descargar CV",
+    "nuevaPestana": "(se abre en una pestaña nueva)",
+    "tipos": {
+      "educacion": "Educación",
+      "experiencia": "Experiencia",
+      "curso": "Curso",
+      "proyecto": "Proyecto"
+    }
+  },
+  "contacto": {
+    "titulo": "Invitación a la fiesta",
+    "anfitrion": "Anfitriona",
+    "texto": "Quedas invitado a construir algo juntos. Responde por cualquiera de estos canales:",
+    "email": "Correo",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "firma": "Con cariño, la RFA",
+    "copiar": "Copiar correo",
+    "copiado": "Correo copiado",
+    "errorCopia": "No se pudo copiar; selecciona el correo a mano."
+  },
+  "secreto": {
+    "volver": "Salir sin hacer ruido",
+    "puerta": "Puerta cerrada",
+    "instruccion": "Introduce el código de 4 dígitos",
+    "codigo": "2026",
+    "borrar": "Borrar",
+    "abrir": "Abrir",
+    "error": "Código incorrecto. La puerta no se mueve.",
+    "exito": "Acceso concedido",
+    "teclado": "Teclado de la puerta",
+    "pantalla": "Código introducido"
+  },
+  "notFound": {
+    "codigo": "404",
+    "boton": "Volver al inicio"
+  },
+  "coleccionable": {
+    "label": "Bolsa de chips: recoger para sumar un corazón",
+    "recogido": "Chips recogidos: +1 corazón"
+  },
+  "fiesta": {
+    "titulo": "Bienvenida a la RFA",
+    "mensaje": "707, Jumin, Zen, Yoosung, Jaehee, V y Unknown te dan la bienvenida: ya eres miembro de la Rivera's Fullstack Association. Unknown deja algo más: la puerta que no sale en el menú se abre con el año en que la RFA llegó al Demo Day.",
+    "cta": "Ir a la puerta",
+    "repetir": "Ver la fiesta otra vez",
+    "cerrar": "Cerrar"
+  }
+}

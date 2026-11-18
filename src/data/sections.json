@@ -1,0 +1,80 @@
+[
+  {
+    "id": "sobre-mi",
+    "ruta": "/sobre-mi",
+    "titulo": "Sobre mí",
+    "subtitulo": "Diseño + código",
+    "icon": "about",
+    "guia": "jaehee",
+    "colorVar": "--p-jaehee",
+    "archivo": "sobre-mi.md",
+    "nivel": 1
+  },
+  {
+    "id": "proyectos",
+    "ruta": "/proyectos",
+    "titulo": "Proyectos",
+    "subtitulo": "Álbum de trabajos",
+    "icon": "projects",
+    "guia": "jumin",
+    "colorVar": "--p-jumin",
+    "archivo": "proyectos.md",
+    "nivel": 1
+  },
+  {
+    "id": "stack",
+    "ruta": "/stack",
+    "titulo": "Stack",
+    "subtitulo": "Terminal de 707",
+    "icon": "stack",
+    "guia": "707",
+    "colorVar": "--p-707",
+    "archivo": "stack.sh",
+    "nivel": 1
+  },
+  {
+    "id": "diseno",
+    "ruta": "/diseno",
+    "titulo": "Diseño UI",
+    "subtitulo": "Interfaces y proceso",
+    "icon": "design",
+    "guia": "zen",
+    "colorVar": "--p-zen",
+    "archivo": "diseno-ui.md",
+    "nivel": 2
+  },
+  {
+    "id": "trayectoria",
+    "ruta": "/trayectoria",
+    "titulo": "Trayectoria",
+    "subtitulo": "Línea de tiempo + CV",
+    "icon": "timeline",
+    "guia": "v",
+    "colorVar": "--p-v",
+    "archivo": "trayectoria.log",
+    "nivel": 2
+  },
+  {
+    "id": "contacto",
+    "ruta": "/contacto",
+    "titulo": "Contacto",
+    "subtitulo": "Invitación a la fiesta",
+    "icon": "contact",
+    "guia": "yoosung",
+    "colorVar": "--p-yoosung",
+    "archivo": "invitacion.txt",
+    "nivel": 2
+  },
+  {
+    "id": "secreto",
+    "ruta": "/secreto",
+    "titulo": "???",
+    "subtitulo": "Acceso restringido",
+    "icon": "lock",
+    "guia": "unknown",
+    "colorVar": "--p-unknown",
+    "archivo": ".secreto",
+    "nivel": 3,
+    "oculta": true
+  }
+]

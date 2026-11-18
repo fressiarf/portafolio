@@ -1,0 +1,243 @@
+[
+  {
+    "slug": "sembremos-seguridad",
+    "nombre": "Sembremos Seguridad",
+    "resumen": "Intranet del programa Sembremos Seguridad (MSP Costa Rica) en Puntarenas.",
+    "descripcion": "Plataforma interna para coordinar el programa Sembremos Seguridad del Ministerio de Seguridad Pública en Puntarenas. Monorepo con frontend en React 19 + Vite y API en Express 5 + Sequelize 6, sobre una base MySQL dual (MSP y Municipalidad) sincronizada. Autenticación con JWT en cookie HTTP-Only, cuatro dashboards según el rol, matriz de seguimiento de líneas de acción, carga de evidencias y visualizaciones con ECharts.",
+    "rol": "Desarrolladora Full Stack",
+    "stack": [
+      "React 19",
+      "Vite",
+      "Express 5",
+      "Sequelize 6",
+      "MySQL",
+      "JWT",
+      "ECharts"
+    ],
+    "repo": "https://github.com/fressiarf/sembremos-seguridad",
+    "demo": "",
+    "destacado": true,
+    "colorVar": "--p-jumin",
+    "etiqueta": "",
+    "tags": [
+      "React 19",
+      "Express 5",
+      "MySQL dual",
+      "JWT"
+    ],
+    "media": "/projects/sembremos-seguridad.webp"
+  },
+  {
+    "slug": "marketplace-fwd",
+    "nombre": "FWD Marketplace",
+    "resumen": "Plataforma de empleabilidad para egresados de FWD, creada en el Hackathon FWD 2026.",
+    "descripcion": "Marketplace que conecta a personas egresadas de FWD con oportunidades laborales, presentado en el Demo Day del Hackathon FWD 2026. Construido con Next.js 15, React 19 y TypeScript estricto; Supabase para Postgres, autenticación y RLS; Tailwind v4 con shadcn/ui; internacionalización con next-intl; validación con Zod y tres agentes de IA vía OpenRouter.",
+    "rol": "Colaboradora (2.ª contribuyente)",
+    "stack": [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Supabase",
+      "Tailwind v4",
+      "shadcn/ui",
+      "next-intl",
+      "Zod",
+      "OpenRouter"
+    ],
+    "repo": "https://github.com/ErrolFallas/marketplace_fwd-hackathon",
+    "demo": "https://adelante-marketplace-fwd-fess-xi.vercel.app",
+    "destacado": true,
+    "colorVar": "--p-707",
+    "etiqueta": "Colaboradora · Hackathon FWD 2026",
+    "tags": [
+      "Next.js 15",
+      "TypeScript",
+      "Supabase",
+      "IA"
+    ],
+    "media": "/projects/marketplace-fwd.webp"
+  },
+  {
+    "slug": "dashboard-financiero",
+    "nombre": "Dashboard Financiero",
+    "resumen": "Panel de finanzas con motor de análisis local y consultas en lenguaje natural.",
+    "descripcion": "Dashboard financiero en React 19 + Vite con un motor de análisis que corre en el navegador y permite hacer consultas sobre los datos en lenguaje natural.",
+    "rol": "Desarrolladora",
+    "stack": [
+      "React 19",
+      "Vite",
+      "JavaScript"
+    ],
+    "repo": "https://github.com/fressiarf/dashboard-financiero",
+    "demo": "",
+    "destacado": false,
+    "colorVar": "--p-yoosung",
+    "etiqueta": "",
+    "tags": [
+      "React 19",
+      "Vite",
+      "JavaScript"
+    ],
+    "media": "/projects/dashboard-financiero.webp"
+  },
+  {
+    "slug": "gestion-vuelos",
+    "nombre": "Gestión de Vuelos",
+    "resumen": "SPA con API REST y MySQL organizada en tres capas.",
+    "descripcion": "Aplicación de una sola página para gestionar vuelos, respaldada por una API REST y una base de datos MySQL, con arquitectura de tres capas.",
+    "rol": "Desarrolladora",
+    "stack": [
+      "JavaScript",
+      "API REST",
+      "MySQL"
+    ],
+    "repo": "https://github.com/fressiarf/gestion-vuelos",
+    "demo": "",
+    "destacado": false,
+    "colorVar": "--p-v",
+    "etiqueta": "",
+    "tags": [
+      "JavaScript",
+      "API REST",
+      "MySQL"
+    ],
+    "media": "/projects/gestion-vuelos.webp"
+  },
+  {
+    "slug": "gestion-adopciones",
+    "nombre": "Gestión de Adopciones",
+    "resumen": "App de adopciones con React 19, React Router 7 y Bootstrap 5.",
+    "descripcion": "Sistema para administrar adopciones construido con React 19, React Router 7 y Bootstrap 5, con json-server como backend simulado y SweetAlert2 para la retroalimentación al usuario.",
+    "rol": "Desarrolladora",
+    "stack": [
+      "React 19",
+      "React Router 7",
+      "Bootstrap 5",
+      "json-server",
+      "SweetAlert2"
+    ],
+    "repo": "https://github.com/fressiarf/gestion-adopciones",
+    "demo": "",
+    "destacado": false,
+    "colorVar": "--p-jaehee",
+    "etiqueta": "",
+    "tags": [
+      "React 19",
+      "React Router 7",
+      "Bootstrap 5",
+      "json-server"
+    ],
+    "media": "/projects/gestion-adopciones.webp"
+  },
+  {
+    "slug": "reactQuizTypescript",
+    "nombre": "React Quiz TypeScript",
+    "resumen": "App de adopción de mascotas en React + TypeScript + Vite.",
+    "descripcion": "Aplicación de adopción de mascotas desarrollada con React, TypeScript y Vite para practicar tipado estricto en componentes.",
+    "rol": "Desarrolladora",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Vite"
+    ],
+    "repo": "https://github.com/fressiarf/reactQuizTypescript",
+    "demo": "",
+    "destacado": false,
+    "colorVar": "--p-unknown",
+    "etiqueta": "",
+    "tags": [
+      "React",
+      "TypeScript",
+      "Vite"
+    ],
+    "media": "/projects/reactQuizTypescript.webp"
+  },
+  {
+    "slug": "sistema-bancario-mvc",
+    "nombre": "Sistema Bancario MVC",
+    "resumen": "Backend bancario con Node, Express y Sequelize bajo patrón MVC.",
+    "descripcion": "Sistema bancario implementado con Node.js, Express y Sequelize, siguiendo el patrón Modelo-Vista-Controlador.",
+    "rol": "Desarrolladora",
+    "stack": [
+      "Node.js",
+      "Express",
+      "Sequelize"
+    ],
+    "repo": "https://github.com/fressiarf/sistema-bancario-mvc",
+    "demo": "",
+    "destacado": false,
+    "colorVar": "--p-jumin",
+    "etiqueta": "",
+    "tags": [
+      "Node.js",
+      "Express",
+      "Sequelize"
+    ],
+    "media": "/projects/sistema-bancario-mvc.webp"
+  },
+  {
+    "slug": "sistema-gestion-zoologico",
+    "nombre": "Sistema de Gestión de Zoológico",
+    "resumen": "Proyecto POO con sitio público y panel de administración.",
+    "descripcion": "Sistema de gestión para un zoológico diseñado con programación orientada a objetos, que incluye un sitio público y un panel de administración.",
+    "rol": "Desarrolladora",
+    "stack": [
+      "JavaScript",
+      "POO"
+    ],
+    "repo": "https://github.com/fressiarf/sistema-gestion-zoologico",
+    "demo": "",
+    "destacado": false,
+    "colorVar": "--p-yoosung",
+    "etiqueta": "",
+    "tags": [
+      "JavaScript",
+      "POO"
+    ],
+    "media": "/projects/sistema-gestion-zoologico.webp"
+  },
+  {
+    "slug": "sistema-de-reservas-hotel",
+    "nombre": "Sistema de Reservas de Hotel",
+    "resumen": "Reservas de hotel con Vanilla JS, Express y localStorage.",
+    "descripcion": "Sistema de reservas de hotel con frontend en JavaScript puro, servidor Express y persistencia en localStorage.",
+    "rol": "Desarrolladora",
+    "stack": [
+      "JavaScript",
+      "Express",
+      "localStorage"
+    ],
+    "repo": "https://github.com/fressiarf/sistema-de-reservas-hotel",
+    "demo": "",
+    "destacado": false,
+    "colorVar": "--p-v",
+    "etiqueta": "",
+    "tags": [
+      "JavaScript",
+      "Express",
+      "localStorage"
+    ],
+    "media": "/projects/sistema-de-reservas-hotel.webp"
+  },
+  {
+    "slug": "mysql_libreria",
+    "nombre": "MySQL Librería",
+    "resumen": "Modelado entidad-relación y consultas analíticas para una librería.",
+    "descripcion": "Base de datos para una librería: modelado entidad-relación y un conjunto de consultas analíticas en MySQL.",
+    "rol": "Desarrolladora",
+    "stack": [
+      "MySQL",
+      "Modelado ER"
+    ],
+    "repo": "https://github.com/fressiarf/mysql_libreria",
+    "demo": "",
+    "destacado": false,
+    "colorVar": "--p-zen",
+    "etiqueta": "",
+    "tags": [
+      "MySQL",
+      "Modelado ER"
+    ],
+    "media": "/projects/mysql_libreria.webp"
+  }
+]

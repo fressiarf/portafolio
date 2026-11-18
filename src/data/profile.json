@@ -1,0 +1,30 @@
+{
+  "id": "fressia",
+  "nombre": "Fressia Rivera Fallas",
+  "nombreCorto": "Fressia",
+  "rol": "Desarrolladora Full Stack Junior",
+  "titulo": "Técnica en Diseño Publicitario",
+  "ubicacion": "Barranca, Puntarenas, Costa Rica",
+  "bio": [
+    "Desarrolladora Full Stack y técnica en Diseño Publicitario, orientada a crear soluciones digitales y a mejorar procesos con inteligencia artificial.",
+    "Desarrollo aplicaciones web con JavaScript, TypeScript, React, Next.js, Node.js, bases de datos y APIs REST, e integro IA para automatizar tareas, gestionar información y generar contenido.",
+    "Combino análisis de necesidades, pensamiento lógico y aprendizaje continuo para construir soluciones escalables y eficientes."
+  ],
+  "idiomas": [
+    {
+      "idioma": "Español",
+      "nivel": "Nativo"
+    },
+    {
+      "idioma": "Inglés",
+      "nivel": "A2"
+    }
+  ],
+  "email": "fjr.riverafallas@gmail.com",
+  "github": "https://github.com/fressiarf",
+  "linkedin": "",
+  "cv": "/cv/CV-Fressia-Rivera-Fallas.pdf",
+  "openToWork": true,
+  "colorVar": "--lila",
+  "avatar": "mc"
+}

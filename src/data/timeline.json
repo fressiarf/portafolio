@@ -1,0 +1,83 @@
+[
+  {
+    "id": "diseno-publicitario",
+    "fecha": "2025",
+    "tipo": "educacion",
+    "titulo": "Técnico medio en Diseño Publicitario",
+    "lugar": "Colegio Técnico Profesional de Puntarenas",
+    "descripcion": ""
+  },
+  {
+    "id": "soluciones-graficas",
+    "fecha": "2025",
+    "tipo": "experiencia",
+    "titulo": "Diseñadora Junior (pasantía)",
+    "lugar": "Soluciones Gráficas",
+    "descripcion": "Piezas gráficas y publicitarias, diagramación, gestión de requerimientos de clientes, impresión y corte."
+  },
+  {
+    "id": "alfabetizacion-digital",
+    "fecha": "2025",
+    "tipo": "curso",
+    "titulo": "Alfabetización Digital",
+    "lugar": "FWD Academy Costa Rica",
+    "descripcion": ""
+  },
+  {
+    "id": "taller-dibujo",
+    "fecha": "2025",
+    "tipo": "curso",
+    "titulo": "Taller básico de Dibujo y Técnicas Mixtas",
+    "lugar": "Universidad de Costa Rica",
+    "descripcion": ""
+  },
+  {
+    "id": "fwd-fullstack",
+    "fecha": "2026",
+    "tipo": "educacion",
+    "titulo": "Desarrollo Web Full-Stack",
+    "lugar": "FWD Costa Rica",
+    "descripcion": ""
+  },
+  {
+    "id": "fwd-ia",
+    "fecha": "2026",
+    "tipo": "educacion",
+    "titulo": "Soluciones de Negocios con IA",
+    "lugar": "FWD Costa Rica",
+    "descripcion": ""
+  },
+  {
+    "id": "sembremos-seguridad",
+    "fecha": "2026",
+    "tipo": "proyecto",
+    "titulo": "Desarrolladora Full Stack (proyecto académico)",
+    "lugar": "Plataforma de Seguimiento Estratégico, Programa Sembremos Seguridad",
+    "descripcion": "Solución para el Ministerio de Seguridad Pública de Costa Rica.",
+    "stack": [
+      "React",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "Sequelize",
+      "JWT"
+    ],
+    "slug": "sembremos-seguridad"
+  },
+  {
+    "id": "hackathon-forward",
+    "fecha": "2026",
+    "tipo": "proyecto",
+    "titulo": "Desarrolladora Full Stack (Hackathon Forward, 5.ª edición)",
+    "lugar": "FWD Marketplace, FWD Academy",
+    "descripcion": "Mejoras presentadas en el Demo Day.",
+    "stack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Supabase",
+      "Tailwind CSS"
+    ],
+    "slug": "marketplace-fwd"
+  }
+]

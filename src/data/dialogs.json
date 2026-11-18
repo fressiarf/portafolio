@@ -1,0 +1,164 @@
+{
+  "home": [
+    {
+      "speaker": "707",
+      "text": "Bienvenida a la RFA: Rivera's Fullstack Association, el portafolio de Fressia. Yo cuido el Stack, o sea, la terminal."
+    },
+    {
+      "speaker": "jumin",
+      "text": "Yo superviso los Proyectos. Solo exhibimos trabajo terminado y bien hecho."
+    },
+    {
+      "speaker": "zen",
+      "text": "A mí me toca Diseño UI: el proceso detrás de cada interfaz. La primera impresión siempre cuenta."
+    },
+    {
+      "speaker": "yoosung",
+      "text": "Yo guardo la invitación de Contacto, por si quieres sumarla a tu equipo."
+    },
+    {
+      "speaker": "jaehee",
+      "text": "Yo presento el Sobre mí: quién es, de dónde viene y hacia dónde va."
+    },
+    {
+      "speaker": "v",
+      "text": "Yo llevo la Trayectoria. Cada etapa del camino quedó registrada."
+    },
+    {
+      "speaker": "unknown",
+      "text": "Y yo cuido una puerta que no sale en el menú. Se abre con el año en que la RFA llegó al Demo Day."
+    }
+  ],
+  "sobre-mi": [
+    {
+      "speaker": "jaehee",
+      "text": "Le presento a la fundadora de la asociación: Fressia Rivera Fallas, desarrolladora Full Stack Junior de Barranca, Puntarenas."
+    },
+    {
+      "speaker": "jaehee",
+      "text": "También es técnica en Diseño Publicitario. Por eso cuida que cada interfaz sea clara antes que vistosa."
+    },
+    {
+      "speaker": "jumin",
+      "text": "Integra inteligencia artificial para automatizar tareas y mejorar procesos. Una inversión sensata."
+    },
+    {
+      "speaker": "707",
+      "text": "Traducción: analiza, programa y no deja de aprender. Bueno, y no se le escapa casi ningún bug."
+    }
+  ],
+  "proyectos": [
+    {
+      "speaker": "jumin",
+      "text": "Este es el álbum de trabajos. Los destacados van primero, como corresponde."
+    },
+    {
+      "speaker": "yoosung",
+      "text": "¡Puedes filtrar por tecnología! Yo empezaría por los que usan bases de datos."
+    },
+    {
+      "speaker": "jumin",
+      "text": "Le recomiendo comenzar por Sembremos Seguridad."
+    }
+  ],
+  "proyecto": [
+    {
+      "speaker": "jumin",
+      "text": "Expediente del proyecto. Rol, stack y enlaces, sin rodeos."
+    },
+    {
+      "speaker": "707",
+      "text": "Y el repositorio está abierto. Puedes revisar el código tú misma, o tú mismo."
+    }
+  ],
+  "stack": [
+    {
+      "speaker": "707",
+      "text": "Bienvenida a mi terminal. Cada miembro de la RFA cuida una parte del stack."
+    },
+    {
+      "speaker": "zen",
+      "text": "Las herramientas son mías. Sin buen pulso, ni el mejor código brilla."
+    },
+    {
+      "speaker": "707",
+      "text": "Ejecuto el comando y te muestro cada categoría. No toques nada rojo."
+    }
+  ],
+  "diseno": [
+    {
+      "speaker": "zen",
+      "text": "Bienvenida a Diseño UI. Aquí se ve el proceso, no solo el resultado."
+    },
+    {
+      "speaker": "jaehee",
+      "text": "Empieza por el caso de estudio de este mismo sitio: de la referencia a la versión actual, paso a paso."
+    },
+    {
+      "speaker": "zen",
+      "text": "Las capturas de sus proyectos están en camino. Lo bueno se hace esperar."
+    }
+  ],
+  "trayectoria": [
+    {
+      "speaker": "v",
+      "text": "Cada camino tiene sus estaciones. Esta es la línea de tiempo de Fressia, de 2025 a 2026."
+    },
+    {
+      "speaker": "jumin",
+      "text": "Del diseño publicitario al desarrollo Full Stack, con dos proyectos que vale la pena revisar."
+    },
+    {
+      "speaker": "v",
+      "text": "Su CV completo está al final. Puedes verlo o descargarlo."
+    }
+  ],
+  "contacto": [
+    {
+      "speaker": "yoosung",
+      "text": "¿Vas a organizar una fiesta... digo, un equipo? Fressia está disponible para nuevas oportunidades."
+    },
+    {
+      "speaker": "707",
+      "text": "El correo está ahí abajo. Hasta tiene botón para copiarlo, de nada."
+    },
+    {
+      "speaker": "yoosung",
+      "text": "Aquí está la invitación. Escríbele o revisa su GitHub."
+    }
+  ],
+  "puerta": [
+    {
+      "speaker": "unknown",
+      "text": "Esta puerta tiene cerradura de cuatro dígitos."
+    },
+    {
+      "speaker": "707",
+      "text": "Pista de la casa: el año en que la RFA llegó al Demo Day. Yo no dije nada."
+    }
+  ],
+  "secreto": [
+    {
+      "speaker": "unknown",
+      "text": "Así que encontraste esta sala. No muchos llegan hasta aquí."
+    },
+    {
+      "speaker": "unknown",
+      "text": "Ella también trabaja con IA: Copilot, Claude, Gemini, Cursor. Herramientas, no atajos."
+    },
+    {
+      "speaker": "v",
+      "text": "Ahora vuelve. Y no le cuentes a nadie que estuviste aquí."
+    }
+  ],
+  "notFound": [
+    {
+      "speaker": "707",
+      "text": "Error 404. Esta sala no existe, o la borré yo por accidente."
+    },
+    {
+      "speaker": "jumin",
+      "text": "Vuelva al inicio. Ahí está todo en orden."
+    }
+  ]
+}
